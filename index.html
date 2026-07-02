@@ -500,7 +500,7 @@
   function levelPolaroids(lvl){
     const start = (lvl * 3) % SLOTS.length;
     return "abc".split("").map((s, i) => ({
-      src: "images/" + (lvl+1) + "/" + (lvl+1) + "-" + s + ".png",
+      src: "images/" + (lvl+1) + "/" + (lvl+1) + "-" + s + ".webp",
       slot: SLOTS[(start + i) % SLOTS.length],
     }));
   }
@@ -509,12 +509,12 @@
   const WIN_SLOTS = [
     { x:-420, y:-45, r:-7 },   // izquierda
     { x: 425, y:-60, r: 7 },   // derecha
-    { x:  12, y: 255, r:-3 },  // abajo centro
+    { x:  12, y: 380, r:-3 },  // abajo centro (más abajo para que salga completa bajo el teléfono)
   ];
   const WIN_PHOTOS = [
-    { src:"images/victory/v-1.jpg", slot:WIN_SLOTS[0] },
-    { src:"images/victory/v-2.jpg", slot:WIN_SLOTS[1] },
-    { src:"images/victory/v-3.png", slot:WIN_SLOTS[2] },
+    { src:"images/victory/v-1.webp", slot:WIN_SLOTS[0] },
+    { src:"images/victory/v-2.webp", slot:WIN_SLOTS[1] },
+    { src:"images/victory/v-3.webp", slot:WIN_SLOTS[2] },
   ];
 
   // Construye las polaroids a partir de una lista {src, slot, cap?}.
